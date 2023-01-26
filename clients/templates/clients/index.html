@@ -1,0 +1,13 @@
+<h1>Bank Branches</h1>
+{% if branch_list %}
+<ul>
+  {% for branch in branch_list %}
+  <li>
+    <p>{{ branch.branch_name}} &nbsp; Address: {{ branch.address}}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No branches open currently</p>
+{% endif %}
+<p>There are {{ num_branches }} branches operating currently</p>
